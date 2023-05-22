@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colorful Healthcare Services</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      color: #343a40;
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+      background-color: #007bff;
+      color: #ffffff;
+    }
+
+    .navbar-brand {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .navbar-nav .nav-link {
+      color: #ffffff;
+    }
+
+    .jumbotron {
+      background-color: #ffffff;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 30px;
+    }
+
+    .btn-primary {
+      background-color: #007bff;
+      border-color: #007bff;
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus {
+      background-color: #0056b3;
+      border-color: #0056b3;
+    }
+
+    .service {
+      background-color: #ffffff;
+      padding: 30px;
+      margin-bottom: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .service-icon {
+      font-size: 48px;
+      color: #007bff;
+      margin-bottom: 20px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .service-title {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .service-description {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .service:hover {
+      transform: scale(1.05);
+    }
+
+    .service:hover .service-icon {
+      transform: rotate(10deg);
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="#">Healthcare Services</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="jumbotron">
+    <h1>Quality Healthcare Services for You</h1>
+    <p>Discover our range of specialized healthcare services.</p>
+    <a href="#" class="btn btn-primary btn-lg">Learn More</a>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="service" onmouseover="rotateIcon(this)" onmouseout="resetIcon(this)">
+          <i class="bi bi-heart-fill service-icon"></i>
+          <h2 class="service-title">Cardiology</h2>
+          <p class="service-description">Specialized care for your heart health.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="service" onmouseover="rotateIcon(this)" onmouseout="resetIcon(this)">
+          <i class="bi bi-diagram-2-fill service-icon"></i>
+          <h2 class="service-title">Radiology</h2>
+          <p class="service-description">Advanced imaging and diagnostic services.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="service" onmouseover="rotateIcon(this)" onmouseout="resetIcon(this)">
+          <i class="bi bi-people-fill service-icon"></i>
+          <h2 class="service-title">Pediatrics</h2>
+          <p class="service-description">Compassionate care for children.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function rotateIcon(element) {
+      element.querySelector(".service-icon").style.transform = "rotate(10deg)";
+    }
+
+    function resetIcon(element) {
+      element.querySelector(".service-icon").style.transform = "rotate(0deg)";
+    }
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
